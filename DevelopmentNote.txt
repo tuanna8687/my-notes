@@ -43,3 +43,21 @@
 		+ Files in the solution that is open in the Visual Studio instance.
 		+ Directories that are specified in the Common Properties / Debug Source Files page in the properties of the solution. (In the Solution Explorer, select the solution node, right-click, and select Properties. )
 		+ The source information of the .pdb of the module. This can be the location of the source file when the module was built, or it can be a command to a source server.
+		
+8. Git rebase (https://medium.freecodecamp.org/git-rebase-and-the-golden-rule-explained-70715eccc372)
+	A <-- B <-- C <-- D (master)
+			\
+			 \ E <-- F (feature)
+	Command: git rebase master feature --> Rebase the branch feature. A rebase will sequentially take all the commit from the branch (feature) you’re in, and reapply them to the destination (master)
+9. Git folder (https://medium.freecodecamp.org/understanding-git-for-real-by-exploring-the-git-directory-1e079c15b807)
+	- Every-time you create a file, and track it (move to staging area), git compresses it and stores it into its own data structure. The compressed object will have a unique name, a hash, and will be stored under the object directory.
+
+10. T-SQL
+	- Aggregate functions: COUNT, MAX, MIN, SUM, AVG
+		+ If the query does not contains GROUP BY clause then scope of aggregate functions are on all data, it means that calculations are performed on all data row -> Result only has a column
+		+ If the query contains GROUP BY clause then scope of aggregate functions are only on each group, it means that calcuationas are performed on each group -> Result has multiple columns corresponding to each group
+	- WHERE clause can't use with aggregate functions
+	- Only HAVING clause can use with aggregate functions -> It impacts to SELECT clause, it means that SELECT clause must perform a aggregate function or select columns belong to GROUP BY clause
+		+ Similar to aggregate functions, if the query has only HAVING clause then HAVING condition apply on all data
+		+ If the query has GROUP BY and HAVING clauses then HAVING condtion apply on each group
+	- ALL, ANY (http://www.sqltutorial.org/sql-all/)
